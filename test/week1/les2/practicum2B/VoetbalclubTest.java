@@ -1,8 +1,5 @@
 package week1.les2.practicum2B;
-
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class VoetbalclubTest {
@@ -10,6 +7,12 @@ class VoetbalclubTest {
     @Test
     public void clubNameEmpty() {
         Voetbalclub c = new Voetbalclub("");
+        assertEquals("FC", c.getNaam());
+    }
+
+    @Test
+    public void clubNameNull() {
+        Voetbalclub c = new Voetbalclub(null);
         assertEquals("FC", c.getNaam());
     }
 
