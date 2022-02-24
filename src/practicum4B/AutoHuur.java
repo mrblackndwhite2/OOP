@@ -34,7 +34,7 @@ public class AutoHuur {
     }
 
     public double totaalPrijs() {
-        if (gehuurdeAuto == null || aantalDagen == 0) {
+        if (gehuurdeAuto == null || aantalDagen <= 0) {
             return 0.0;
         }
 

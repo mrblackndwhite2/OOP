@@ -10,7 +10,11 @@ public class Klant {
     }
 
     public void setKorting(double kP) {
-        this.kortingsPercentage = kP;
+        if (kP <= 0) {
+            this.kortingsPercentage = 0;
+        } else {
+            this.kortingsPercentage = kP;
+        }
     }
 
     public double getKorting() {

@@ -10,7 +10,11 @@ public class Auto {
     }
 
     public void setPrijsPerDag(double prPd) {
-        this.prijsPerDag = prPd;
+        if (prPd < 0) {
+            this.prijsPerDag = 0;
+        } else {
+            this.prijsPerDag = prPd;
+        }
     }
 
     public double getPrijsPerDag() {
